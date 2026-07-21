@@ -4,4 +4,17 @@ sources:
     schema: jaffle_shop  
     tables:
       - name: orders
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
+              
       - name: customers
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
+              
+      
