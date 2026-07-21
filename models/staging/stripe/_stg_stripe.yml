@@ -1,0 +1,19 @@
+models:
+  - name: stg_stripe_payment
+    description: One row per Stripe payment with renamed fields from the raw payment source.
+    columns:
+      - name: payment_id
+        description: Primary key for the payment record.
+        data_tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: Foreign key to the order associated with the payment.
+      - name: payment_method
+        description: Payment method used for the transaction.
+      - name: payment_status
+        description: Status of the payment transaction.
+      - name: payment_amount
+        description: Amount processed for the payment.
+      - name: payment_created
+        description: Timestamp when the payment record was created.
