@@ -8,3 +8,12 @@ macros:
       - name: decimals
         type: integer
         description: the decimal places desired by the user, default value is 2.
+  - name: grant_select
+    description: macro that fast grand access on schema level to different roles
+    arguments:
+      - name: schema
+        type: string
+        description: the schema that would be given access to the role, the default one is target.schema which is the current schema
+      - name: role
+        type: string
+        description: the role which will be granted access to, the default one is target.role which is the current role.
