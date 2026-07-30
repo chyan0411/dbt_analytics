@@ -1,12 +1,36 @@
 {% macro  union_table_by_prefix(database, schema, prefix) %}
-    {% set table =  dbt_utils.get_relations_by_prefix(database=database,schema=schema,prefix=prefix) %}
+    {% set tables =  dbt_utils.get_relations_by_prefix(
+        database=database,
+        schema=schema,
+        prefix=prefix
+    ) %}
     {% for table in tables %}
         {% if not loop.first %}
             union all
         {% endif %}
-        select * from {{table.database}}.{{table.schema}}.{{table.prefix}}
+        select * from {{ table.database }}.{{ table.schema }}.{{ table.name }}
     {% endfor %}
 {% endmacro %}
 
 
+{#
+{% macro union_table_by_prefix(database, schema, prefix) %}
 
+    {% set tables = dbt_utils.get_relations_by_prefix(
+        database=database,
+        schema=schema,
+        prefix=prefix
+    ) %}
+
+    {% for table in tables %}
+
+        {% if not loop.first %}
+            union all
+        {% endif %}
+
+        select *
+        from {{ table }}
+
+    {% endfor %}
+
+{% endmacro %} #}
