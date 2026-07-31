@@ -1,0 +1,15 @@
+models:
+  - name: fct_orders
+    description: this is the model that conbine the order payment/status ....
+    columns:
+      - name: order_id
+        description: order Id from oders table
+      - name: customer_id
+        description: customer id from orders table
+      - name: order_date
+      - name: order_status
+      - name: amount
+        description: joining column for orders table and order_payments table
+
+
+

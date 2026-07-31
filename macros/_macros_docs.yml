@@ -1,0 +1,19 @@
+macros:
+  - name: cents_to_dollars
+    description: macro that convert cents to dollars with a desired decimal places by user
+    arguments:
+      - name: col_name
+        type: string
+        description: the column that contains cents as values, pending to be converted
+      - name: decimals
+        type: integer
+        description: the decimal places desired by the user, default value is 2.
+  - name: grant_select
+    description: macro that fast grand access on schema level to different roles
+    arguments:
+      - name: schema
+        type: string
+        description: the schema that would be given access to the role, the default one is target.schema which is the current schema
+      - name: role
+        type: string
+        description: the role which will be granted access to, the default one is target.role which is the current role.
