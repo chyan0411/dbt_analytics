@@ -1,0 +1,15 @@
+
+snapshots:
+  - name: snapshot_demo
+
+    relation: source('jaffle_shop','snapshot_demo')
+
+    config:
+
+      strategy: check
+
+      unique_key: id
+
+      check_cols: all
+
+      schema: snapshots
