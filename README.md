@@ -1,15 +1,15 @@
-Welcome to your new dbt project!
-
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
+dbt_analytics
+This repository is a record of my progress following dbt courses. 
+It is built on the Jaffle Shop dataset to practice and demonstrate core Analytics Engineering skills. 
+Covers almost the full dbt workflow — from raw data modelling through to tested, documented mart-layer tables, and I use Snowflake as the data warehouse.
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+What I Learned
+Structuring a dbt project with staging / intermediate / mart layers
+Writing and testing data models with ref() and source()
+Building custom macros with Jinja templating
+Implementing SCD Type 2 snapshots for historical tracking
+Applying generic and custom data quality tests
+Using dbt-utils for common transformation patterns
+Configuring Snowflake as a dbt target warehouse
