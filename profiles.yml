@@ -1,0 +1,13 @@
+your_profile_name: default
+  target: ci
+  outputs:
+    ci:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: <your_role>
+      warehouse: <your_warehouse>
+      database: <raw>
+      schema: jaffle_shop
+      threads: 4
